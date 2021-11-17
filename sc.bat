@@ -1,1 +1,0 @@
-Set-Alias -Name tt -Value terraform
