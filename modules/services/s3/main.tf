@@ -37,7 +37,6 @@ resource "aws_s3_bucket_policy" "nextcloud_s3_datastore_policy" {
         ],
       "Principal": {
         "AWS": [
-            "arn:aws:iam::258671006096:user/general_root",
             "${var.nextcloud_iam_user_arn}",
             "${var.terraform_iam_user_arn}"
         ]
@@ -50,7 +49,6 @@ resource "aws_s3_bucket_policy" "nextcloud_s3_datastore_policy" {
       "Resource": [ "${aws_s3_bucket.nextcloud_s3_datastore.arn}" ],
       "NotPrincipal": {
         "AWS": [
-            "arn:aws:iam::258671006096:user/general_root",
             "${var.nextcloud_iam_user_arn}",
             "${var.terraform_iam_user_arn}"
         ]
